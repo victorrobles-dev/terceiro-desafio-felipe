@@ -1,35 +1,38 @@
 // Desafio de projeto - 3
 class Hero {
-    constructor(name, age, tipo) {
+    constructor(name, age, type) {
         this.name = name;
         this.age = age;
-        this.tipo = tipo;
+        this.type = type;
     }
 
-    atacar() {
-        let ataque;
-        switch (this.tipo) {
+    strike() {
+        let attack;
+        switch (this.type) {
 
             case "guerreiro":
-                ataque = "espada de fogo"
+                attack = "espada de fogo"
                 break
 
             case "mago":
-                ataque = "magia poderosa"
+                attack = "magia poderosa"
                 break
 
             case "monge":
-                ataque = "arte marcial proibida"
+                attack = "arte marcial proibida"
                 break
 
             case "samurai":
-                ataque = "kunai afiada"
+                attack = "kunai afiada"
                 break
 
             default:
-                ataque = "ataque não localizado"
+                attack = "ataque não localizado"
         }
-        console.log(`O ${this.tipo} usou a ${ataque} para se defender!`)
+        console.log(`O ${this.type} usou a ${attack} para se defender!`)
+    }
+    infoHero() {
+        console.log(`Nome: ${this.name} Age: ${this.age} Type: ${this.type}`)
     }
 }
 
@@ -38,7 +41,12 @@ const hero2 = new Hero("Sauron", 500, "mago")
 const hero3 = new Hero("Wu Shang", 40, "monge")
 const hero4 = new Hero("Takezo", 28, "samurai")
 
-hero1.atacar()
-hero2.atacar()
-hero3.atacar()
-hero4.atacar()
+hero1.strike()
+hero2.strike()
+hero3.strike()
+hero4.strike()
+
+hero1.infoHero()
+hero2.infoHero()
+hero3.infoHero()
+hero4.infoHero()
